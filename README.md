@@ -2,7 +2,7 @@
 
 A [Starship](https://starship.rs/) prompt configuration.
 
-<video src="https://github.com/user-attachments/assets/9c71d2d7-6aef-405e-86ac-9d60d0f01120" width="200px">
+<video src="https://github.com/user-attachments/assets/9c71d2d7-6aef-405e-86ac-9d60d0f01120" width="200px"><video>
 
 ## Features
 
