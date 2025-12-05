@@ -1,11 +1,7 @@
 # Starship Config
 
-<br></br>
 A [Starship](https://starship.rs/) prompt configuration.
-<br></br>
 <video src="https://github.com/user-attachments/assets/9c71d2d7-6aef-405e-86ac-9d60d0f01120" width="200px"><video>
-
-<br></br>
 
 ## Features
 
@@ -29,9 +25,6 @@ A [Starship](https://starship.rs/) prompt configuration.
   </pre>
 
 - **Regular Bash features** - Displays active venv, color-coded username, hostname, directory etc...
-
-
-<br></br>
 
 ## Installation
 
