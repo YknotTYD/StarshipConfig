@@ -47,5 +47,5 @@ sh starship-config-install.sh
 
 ```bash
 # Generate the full config yourself (not recommended)
-./starship_toml_gen.py > ~/.config/starship.toml
+python3 starship_toml_gen.py > ~/.config/starship.toml
 ```
