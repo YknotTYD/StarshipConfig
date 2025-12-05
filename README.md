@@ -2,7 +2,7 @@
 
 A [Starship](https://starship.rs/) prompt configuration.
 
-[demo](https://github.com/user-attachments/assets/3b2ca28f-ab19-44f3-a5e6-20f3e1fd9272)
+https://github.com/user-attachments/assets/7411d040-2761-4914-ba92-b58f187a70f4
 
 ## Features
 
