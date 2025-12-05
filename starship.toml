@@ -1,0 +1,154 @@
+#starship.toml
+
+#check battery and sudo
+#ãdd time (maybe just the minutes)
+#color venv
+#@ and : colors
+#default git_status module character
+
+add_newline = false
+format = "$time${env_var.VIRTUAL_ENV_PROMPT}$username$hostname$battery[:](white)$directory$git_branch$git_status ${custom.root_char}${custom.user_char}$character"
+
+[time]
+utc_time_offset="1"
+disabled = false
+time_format = "%H%M"
+format = "[$time]($style)[:](white)"
+style = "#3755ff bold"
+
+[custom.root_char]
+command = 'echo "$"'
+format  = "[$output](bold green)"
+when    = '[ "$EUID" -ne 0 ]'
+
+[custom.user_char]
+command = 'echo "#"'
+format  = "[$output](bold yellow)"
+when    = '[ "$EUID" -eq 0 ]'
+
+[character]
+success_symbol = "[> ](bold green)"
+error_symbol   = "[> ](bold red)"
+vicmd_symbol   = "[< ](bold yellow)"
+format = "$symbol(bold)"
+
+[env_var.VIRTUAL_ENV_PROMPT]
+format = '(\($env_value\) )'
+
+[directory]
+style = "bold #707eff"
+format = "[$path]($style)"
+truncation_length = 3
+
+[git_branch]
+symbol = ""
+format = "[@$branch]($style)"
+style = "bold purple"
+
+[git_status]
+conflicted = "[X](red bold)"
+staged     = "[S](green bold)"
+modified   = "[+](green bold)"
+renamed    = "[~](white bold)"
+deleted    = "[-](red bold)"
+untracked  = "[?](white bold)"
+stashed    = "[∆](white)"
+ahead      = "[↑${count}](yellow bold)"
+behind     = "[↓${count}](red bold)"
+diverged   = "[¦${ahead_count}/${behind_count}](red)"
+up_to_date = ""
+
+disabled = false
+ignore_submodules = true
+
+format = '[\[](bold purple)[$all_status$ahead_behind]($style)[\]](bold purple)'
+
+[package]
+format = "[$symbol$version]($style)"
+
+[python]
+format = '[$version]($style)'
+detect_extensions = []
+detect_files      = []
+detect_folders    = []
+
+[username]
+show_always = true
+format = "[$user](cyan bold)[@](green bold)"
+
+[hostname]
+ssh_only = false
+format = "[$hostname](green bold)"
+
+[battery]
+disabled = false
+format = '[\[](green bold)[$percentage%](white)[\]](green bold)'
+
+### Core Context
+
+#$username — current user name
+#$hostname — machine name
+#$shlvl — shell nesting level
+#$singularity — container name (Singularity/Apptainer)
+#$docker_context — active Docker context
+#$directory — current working directory
+#$env_var — custom environment variables
+
+### Git / VCS
+
+#$git_branch — current branch symbol + name
+#$git_commit — commit hash / tag info
+#$git_status — staged/unstaged/remote status symbols
+#$git_metrics — added/deleted line counts
+#$git_state — ongoing Git operation (MERGING, REBASING, etc.)
+#$hg_branch — Mercurial branch (if active)
+
+### Languages & Tools
+
+#$nodejs — Node.js version
+#$npm — npm version
+#$rust — Rust toolchain version
+#$python — Python version + venv name
+#$ruby — Ruby version (rbenv/rvm/asdf)
+#$golang — Go version
+#$java — Java version
+#$dart — Dart version
+#$deno — Deno version
+#$php — PHP version
+#$scala, $swift, $elixir, $erlang, $haxe, $lua, $kotlin, $c, $cmake, $zig, … — versions for each supported language/tool
+#$package — project version from manifest file (Cargo.toml, package.json, etc.)
+
+### Platforms / Runtime
+
+#$aws — AWS profile & region
+#$gcloud — GCP project & region
+#$azure — Azure subscription
+#$kubernetes — current cluster/context
+#$terraform — Terraform workspace
+#$pulumi — Pulumi stack name
+#$opa — Open Policy Agent version
+#$helm — Helm context
+#$vault — HashiCorp Vault server detail
+
+### Environments / Managers
+
+#$conda, $venv — Python environments
+#$virtualenv — venv name (usually shown inside $python)
+#$nix_shell — info on active nix shell
+#$jobs — number of background jobs
+#$cmd_duration — time the last command took
+#$shell — current shell name/version
+#$status — exit code of previous command
+#$memory_usage — current system memory
+#$os — detected OS symbol
+
+#$time — current time (clock module)
+#$battery — battery charge and symbol
+#$sudo — marker when running as root
+
+### Visual / Misc
+
+#$character — prompt symbol (❯, $, #, etc.)
+#$line_break — inserts newline
+#$palette — color palette testing
+#$text — custom literal segments (via format = "text")
