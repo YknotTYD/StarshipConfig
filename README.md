@@ -2,8 +2,12 @@
 
 A [Starship](https://starship.rs/) prompt configuration.
 
+https://github.com/YknotTYD/StarshipConfig/blob/main/docs/demo.mp4
 https://github.com/YknotTYD/StarshipConfig/blob/main/docs/demo.webm
 <video src="docs/demo.webm" controls width="600">
+  Your browser doesn't support video. <a href="docs/demo.webm">Download demo</a>
+</video>
+<video src="docs/demo.mp4" controls width="600">
   Your browser doesn't support video. <a href="docs/demo.webm">Download demo</a>
 </video>
 
