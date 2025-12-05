@@ -11,15 +11,15 @@ A [Starship](https://starship.rs/) prompt configuration.
   - `#` (yellow) - Sudo credentials cached.
 - **Git integration** - Branch name and detailed status indicators:
   <pre>
-  - conflicted - 'X' (red bold),  
-  - staged     - 'S' (green bold),  
-  - modified   - '+' (green bold),  
-  - renamed    - '~' (white bold),  
-  - deleted    - '-' (red bold),  
-  - untracked  - '?' (white bold),  
-  - stashed    - '∆' (white),  
-  - ahead      - '↑${count}' (yellow bold),  
-  - behind     - '↓${count}' (red bold),
+  - conflicted - 'X'                               (red bold),  
+  - staged     - 'S'                               (green bold),  
+  - modified   - '+'                               (green bold),  
+  - renamed    - '~'                               (white bold),  
+  - deleted    - '-'                               (red bold),  
+  - untracked  - '?'                               (white bold),  
+  - stashed    - '∆'                               (white),  
+  - ahead      - '↑${count}'                       (yellow bold),  
+  - behind     - '↓${count}'                       (red bold),
   - diverged   - '¦${ahead_count}/${behind_count}' (red).
   </pre>
 
