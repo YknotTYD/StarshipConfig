@@ -3,6 +3,11 @@
 
 set -eu
 
+if [ -z "$HOME" ]; then
+	echo "\$HOME is unset." 1>&2
+	exit 1
+fi
+
 BASHRC="$HOME/.bashrc"
 touch "$BASHRC"
 
