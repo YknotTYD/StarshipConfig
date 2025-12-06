@@ -11,9 +11,10 @@ set -eu
 CONF="$HOME/.config/starship.toml"
 CONF_BACKUP="$HOME/.config/.starship.toml.backup"
 
+mkdir -p "$(dirname "$CONF")"
+
 if [ -f "$CONF" ]; then
     cp "$CONF" "$CONF_BACKUP"
 fi
 
 python3 ./starship_toml_gen.py > "$CONF"
-
