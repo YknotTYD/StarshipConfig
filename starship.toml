@@ -9,7 +9,7 @@ utc_time_offset="1"
 disabled = false
 time_format = "%H%M"
 format = "[$time]($style)[:](white)"
-style = "#3755ff bold"
+style = "bold #707eff"
 
 [custom.root_char]
 command = 'echo "$"'
