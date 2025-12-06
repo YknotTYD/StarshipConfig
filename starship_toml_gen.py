@@ -38,9 +38,9 @@ def output_starship_toml(filepath: str = "starship.toml", out: TextIO = sys.stdo
     """
 
     with open(filepath, "r") as file:
-        file_content = file.read().split("\n")
+        file_content = file.readlines()
 
-    replacement_index = file_content.index("#PYTHONANCHOR_REPLACE")
+    replacement_index = file_content.index("#PYTHONANCHOR_REPLACE\n")
     file_content[replacement_index] = ""
 
     for i in range(0, 100):
