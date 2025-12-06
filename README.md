@@ -48,3 +48,7 @@ sh starship-config-install.sh
 # Generate the full config yourself (not recommended)
 python3 starship_toml_gen.py > ~/.config/starship.toml
 ```
+
+### Notes
+
+Currently only supports Linux.
