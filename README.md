@@ -49,7 +49,7 @@ curl https://raw.githubusercontent.com/YknotTYD/StarshipConfig/curl.sh | sh
 git clone https://github.com/YknotTYD/StarshipConfig.git
 cd StarshipConfig
 sh starship-config-install.sh
-``
+```
 
 ### Manual Install
 
