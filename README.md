@@ -34,7 +34,7 @@ A [Starship](https://starship.rs/) prompt configuration.
 - `python3`.
 
 ```bash
-curl -sSLf https://raw.githubusercontent.com/YknotTYD/StarshipTYD/curl.sh | sh
+curl -sSLf https://raw.githubusercontent.com/YknotTYD/StarshipTYD/main/curl.sh | sh
 ```
 
 ### Install
