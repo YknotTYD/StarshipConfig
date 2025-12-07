@@ -9,7 +9,7 @@ _launch_cache_worker() {
         if sudo -vn 2>/dev/null; then
             echo -ne "\x1b[38;2;255;255;0m#" > "$SUDO_CACHE_FILE"
         else
-            echo -ne "\x1b[38;2;0;255;0m$" > "$SUDO_CACHE_FILE"
+            echo -ne "\x1b[38;2;0;255;0m$"   > "$SUDO_CACHE_FILE"
         fi
         sleep 1
     done
