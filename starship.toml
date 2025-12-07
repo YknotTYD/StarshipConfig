@@ -12,9 +12,17 @@ format = "[$time]($style)[:](white)"
 style = "bold #707eff"
 
 [custom.sudo_char]
-command = 'if [ "$(cat "$SUDO_CACHE_FILE" 2>/dev/null)" = "1" ]; then echo -e "\x1b[38;2;255;255;0m#"; else echo -e "\x1b[38;2;0;255;0m$"; fi;'
-format  = "[$output](white)"
-when    = 'true'
+command = '''
+if ! cat "$SUDO_CACHE_FILE" 2>/dev/null; then
+	if sudo -vn 2>/dev/null; then
+        echo -ne "\x1b[38;2;255;255;0m#"
+    else
+        echo -ne "\x1b[38;2;0;255;0m$"
+    fi
+fi
+'''
+format = "$output"
+when   = 'true'
 
 [character]
 success_symbol = "[> ](bold bright-green)"

@@ -7,11 +7,11 @@ export SUDO_CACHE_FILE
 _launch_cache_worker() {
     while true; do
         if sudo -vn 2>/dev/null; then
-            echo "1" > "$SUDO_CACHE_FILE"
+            echo -ne "\x1b[38;2;255;255;0m#" > "$SUDO_CACHE_FILE"
         else
-            echo "0" > "$SUDO_CACHE_FILE"
+            echo -ne "\x1b[38;2;0;255;0m$" > "$SUDO_CACHE_FILE"
         fi
-        sleep 5
+        sleep 1
     done
 }
 
