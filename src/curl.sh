@@ -25,7 +25,8 @@ if ! command -v starship > /dev/null 2>&1; then # starship: command not found
         printf '\n%s\n' "$SETPATH" >> "$BASHRC" #
     fi                                          #
 
-    curl -sSLf https://starship.rs/install.sh | sh -s -- --version v1.24.1 --bin-dir "$HOME/.local/bin" # install starship
+    # install starship
+    curl -sSLf https://starship.rs/install.sh | sh -s -- --version v1.24.1 --bin-dir "$HOME/.local/bin"
 fi
 
 STARSHIP_INIT='eval "$(starship init bash)"'              # add starship to ~/.bashrc
