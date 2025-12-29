@@ -18,29 +18,27 @@ touch "$BASHRC"
 
 if ! command -v starship > /dev/null 2>&1; then # starship: command not found
 
-	mkdir -p "$HOME/.local/bin"             # add ~/.local/bin to PATH
-	SETPATH='PATH="$HOME/.local/bin:$PATH"' #
-                                            #
-	if ! grep -q "$SETPATH" "$BASHRC"; then #
-		echo ''         >> "$BASHRC"        #
-		echo "$SETPATH" >> "$BASHRC"        #
-	fi                                      #
+	mkdir -p "$HOME/.local/bin"                 # add ~/.local/bin to PATH
+	SETPATH='PATH="$HOME/.local/bin:$PATH"'     #
+                                                #
+	if ! grep -q "$SETPATH" "$BASHRC"; then     #
+		printf '\n%s\n' "$SETPATH" >> "$BASHRC" #
+	fi                                          #
 
 	curl -sSLf https://starship.rs/install.sh | sh -s -- --version v1.24.1 --bin-dir "$HOME/.local/bin" # install starship
 fi
 
-STARSHIP_INIT='eval "$(starship init bash)"'  # add starship to ~/.bashrc
-                                              #
-if ! grep -q "$STARSHIP_INIT" "$BASHRC"; then #
-	echo ''               >> "$BASHRC"        #
-	echo "$STARSHIP_INIT" >> "$BASHRC"        #
+STARSHIP_INIT='eval "$(starship init bash)"'              # add starship to ~/.bashrc
+                                                          #
+if ! grep -q "$STARSHIP_INIT" "$BASHRC" 2>/dev/null; then #
+	printf '\n%s\n' "$STARSHIP_INIT" >> "$BASHRC"         #
 fi
 
-TEMP_DIR=$(mktemp -d)
-trap 'rm -rf "$TEMP_DIR"' EXIT
-cd "$TEMP_DIR"
+TEMP_DIR=$(mktemp -d)          # create a temporary
+trap 'rm -rf "$TEMP_DIR"' EXIT # directory to work in
+cd "$TEMP_DIR"                 #
 
-git clone https://github.com/YknotTYD/StarshipTYD.git
-cd StarshipTYD
-
-sh "./starship-tyd-install.sh"
+git clone https://github.com/YknotTYD/StarshipTYD.git # install the config
+cd StarshipTYD                                        #
+                                                      #
+sh "./starship-tyd-install.sh"                        #

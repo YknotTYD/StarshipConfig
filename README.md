@@ -51,13 +51,7 @@ cd StarshipTYD
 sh starship-tyd-install.sh
 ```
 
-### Manual Install
-
-```bash
-# Generate the full config yourself (not recommended)
-python3 starship_toml_gen.py > ~/.config/starship.toml
-```
-
 ### Notes
 
+Run `source ~/.bashrc` after the installation to apply the changes.
 Currently only supports Linux.
