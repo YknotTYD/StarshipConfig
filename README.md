@@ -31,7 +31,8 @@ A [Starship](https://starship.rs/) prompt configuration.
 ### Quick Install
 
 #### Requirements
-- `python3`.
+- `python3`,
+- `git`.
 
 ```bash
 curl -sSLf https://raw.githubusercontent.com/YknotTYD/StarshipTYD/main/src/curl.sh | sh
@@ -43,6 +44,7 @@ curl -sSLf https://raw.githubusercontent.com/YknotTYD/StarshipTYD/main/src/curl.
 
 - [Starship](https://starship.rs/),
 - `python3`,
+- `git`,
 - A `starship`-enabled shell (see [starship installation guide](https://github.com/starship/starship#user-content--installation) (works on v1.24.1)).
 
 ```bash
