@@ -41,4 +41,4 @@ cd "$TEMP_DIR"                 #
 git clone https://github.com/YknotTYD/StarshipTYD.git # install the config
 cd StarshipTYD                                        #
                                                       #
-sh "./src/starship-tyd-install.sh"                     #
+sh "./src/starship-tyd-install.sh"                    #
